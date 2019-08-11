@@ -56,7 +56,7 @@
                 
                 </form>
 
-                <a class="btn btn-outline-warning my-2 my-sm-0" href="signup.php">Signup</a>
+                <a class="btn btn-outline-warning my-2 my-sm-0" href="includes/inc_signup.php">Signup</a>
             
                 <form class="form-inline my-2 my-lg-0" action="includes/inc_logout.php" method="post">
         
