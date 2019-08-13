@@ -6,15 +6,24 @@
 
             <div class="card col-12">
                 <div class="card-body text-center">
-                    <p>You are Logged out</p>
+            <?php
+
+                if ($_SESSION["id"]){
+
+                    echo '<p>You are Logged in</p>';
+
+                }else {
+
+                    echo ' <p>You are Logged out</p>';
+
+                }
+
+            ?>
+
+
                 </div>
             </div>
 
-            <div class="card  col-12">
-                <div class="card-body text-center">
-                    <p>You are Logged in</p>
-                </div>
-            </div>
 
         </div>
 

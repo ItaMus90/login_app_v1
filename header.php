@@ -1,3 +1,10 @@
+<?php
+session_save_path();
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,23 +53,37 @@
 
                 
                 </ul>
-            
-                <form class="form-inline my-2 my-lg-0" action="includes/inc_login.php" method="post">
+
+                <?php
+
+                if ($_SESSION["id"]){
+
+                    echo '<form class="form-inline my-2 my-lg-0" action="includes/inc_logout.php" method="post">
+        
+                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" name="logout-submit">Logout</button>
+
+                </form>';
+
+                }else {
+
+                    echo '<form class="form-inline my-2 my-lg-0" action="includes/inc_login.php" method="post">
         
                     <input class="form-control mr-sm-2" type="text" name="mailuid" placeholder="Username/E-mail...">
                     <input class="form-control mr-sm-2" type="password" name="pwd" placeholder="Password">
         
                     <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" name="login-submit">Login</button>
                 
-                </form>
+                </form><a class="btn btn-outline-warning my-2 my-sm-0" href="includes/inc_signup.php">Signup</a>';
 
-                <a class="btn btn-outline-warning my-2 my-sm-0" href="includes/inc_signup.php">Signup</a>
+                }
+
+                ?>
             
-                <form class="form-inline my-2 my-lg-0" action="includes/inc_logout.php" method="post">
-        
-                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" name="logout-submit">Logout</button>
 
-                </form>
+
+
+            
+
 
             </div>
         

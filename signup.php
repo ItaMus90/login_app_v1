@@ -7,6 +7,39 @@
             <div class="card col-6">
                 <div class="card-body text-center">
 
+                    <?php
+
+                        if(isset($_GET["error"])){
+
+                            if ($_GET['error'] === "emptyfields"){
+
+                                echo '<p style="color:red;">Empty Fileds</p>';
+
+                            }elseif  ($_GET['error'] === "invalidemailuid"){
+
+                                echo '<p style="color:red;">Invalid Username and Email</p>';
+
+                            }elseif ($_GET['error'] === "invalidemail"){
+
+                                echo '<p style="color:red;">Invalid Email</p>';
+
+                            } elseif  ($_GET['error'] === "invaliuid"){
+
+                                echo '<p style="color:red;">Invalid Username</p>';
+
+                            } elseif ($_GET['error'] === "passwordcheck"){
+
+                                echo '<p style="color:red;">Password are not match</p>';
+
+                            }
+
+
+
+
+                        }
+
+                    ?>
+
                     <form method="post" action="includes/inc_signup.php">
 
                         <div class="form-group">
